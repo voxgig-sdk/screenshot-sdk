@@ -37,7 +37,7 @@ class GrammarEntityTest < Minitest::Test
       Vs.getpath(setup[:data], "new.grammar"), "grammar_ref01"))
 
     grammar_ref01_data_result = grammar_ref01_ent.create(grammar_ref01_data, nil)
-    grammar_ref01_data = Helpers.to_map(grammar_ref01_data_result)
+    grammar_ref01_data = Helpers.to_map(grammar_ref01_data_result.respond_to?(:data_get) ? grammar_ref01_data_result.data_get : grammar_ref01_data_result)
     assert !grammar_ref01_data.nil?
 
   end

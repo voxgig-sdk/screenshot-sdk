@@ -41,7 +41,7 @@ describe("RedactEntity", function()
 
     local redact_ref01_data_result, err = redact_ref01_ent:create(redact_ref01_data, nil)
     assert.is_nil(err)
-    redact_ref01_data = helpers.to_map(redact_ref01_data_result)
+    redact_ref01_data = helpers.to_map(type(redact_ref01_data_result) == 'table' and redact_ref01_data_result.data_get and redact_ref01_data_result:data_get() or redact_ref01_data_result)
     assert.is_not_nil(redact_ref01_data)
 
   end)

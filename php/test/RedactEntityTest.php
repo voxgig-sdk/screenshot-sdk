@@ -44,7 +44,7 @@ class RedactEntityTest extends TestCase
             Vs::getpath($setup["data"], "new.redact"), "redact_ref01"));
 
         $redact_ref01_data_result = $redact_ref01_ent->create($redact_ref01_data, null);
-        $redact_ref01_data = Helpers::to_map($redact_ref01_data_result);
+        $redact_ref01_data = Helpers::to_map(is_object($redact_ref01_data_result) && method_exists($redact_ref01_data_result, 'data_get') ? $redact_ref01_data_result->data_get() : $redact_ref01_data_result);
         $this->assertNotNull($redact_ref01_data);
 
     }

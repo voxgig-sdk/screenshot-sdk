@@ -44,7 +44,7 @@ class GrammarEntityTest extends TestCase
             Vs::getpath($setup["data"], "new.grammar"), "grammar_ref01"));
 
         $grammar_ref01_data_result = $grammar_ref01_ent->create($grammar_ref01_data, null);
-        $grammar_ref01_data = Helpers::to_map($grammar_ref01_data_result);
+        $grammar_ref01_data = Helpers::to_map(is_object($grammar_ref01_data_result) && method_exists($grammar_ref01_data_result, 'data_get') ? $grammar_ref01_data_result->data_get() : $grammar_ref01_data_result);
         $this->assertNotNull($grammar_ref01_data);
 
     }

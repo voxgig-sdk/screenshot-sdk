@@ -58,7 +58,7 @@ func TestGrammarEntity(t *testing.T) {
 		if err != nil {
 			t.Fatalf("create failed: %v", err)
 		}
-		grammarRef01Data = core.ToMapAny(grammarRef01DataResult)
+		grammarRef01Data = core.ToMapAny(entityData(grammarRef01DataResult))
 		if grammarRef01Data == nil {
 			t.Fatal("expected create result to be a map")
 		}

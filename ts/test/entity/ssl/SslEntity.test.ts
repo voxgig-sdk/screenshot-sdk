@@ -63,7 +63,7 @@ describe('SslEntity', async () => {
     const ssl_ref01_ent = client.Ssl()
     const ssl_ref01_match: any = {}
 
-    const ssl_ref01_list = await ssl_ref01_ent.list(ssl_ref01_match)
+    const ssl_ref01_list = (await ssl_ref01_ent.list(ssl_ref01_match)).map((e: any) => e.data())
 
 
   })

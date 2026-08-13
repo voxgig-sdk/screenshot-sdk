@@ -62,7 +62,7 @@ describe('GrammarEntity', async () => {
     const grammar_ref01_ent = client.Grammar()
     let grammar_ref01_data = setup.data.new.grammar['grammar_ref01']
 
-    grammar_ref01_data = await grammar_ref01_ent.create(grammar_ref01_data)
+    grammar_ref01_data = (await grammar_ref01_ent.create(grammar_ref01_data)).data()
     assert(null != grammar_ref01_data)
 
 

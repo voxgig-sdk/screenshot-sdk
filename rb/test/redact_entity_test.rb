@@ -37,7 +37,7 @@ class RedactEntityTest < Minitest::Test
       Vs.getpath(setup[:data], "new.redact"), "redact_ref01"))
 
     redact_ref01_data_result = redact_ref01_ent.create(redact_ref01_data, nil)
-    redact_ref01_data = Helpers.to_map(redact_ref01_data_result)
+    redact_ref01_data = Helpers.to_map(redact_ref01_data_result.respond_to?(:data_get) ? redact_ref01_data_result.data_get : redact_ref01_data_result)
     assert !redact_ref01_data.nil?
 
   end

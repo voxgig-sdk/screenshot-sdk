@@ -14,12 +14,12 @@ from __future__ import annotations
 
 from urllib.parse import quote
 
-from config import make_config
-from features import _make_feature
-from core.control import ScreenshotControl
-from core.error import ScreenshotError
-from core.result import ScreenshotResult
-from core.spec import ScreenshotSpec
+from screenshot_sdk.config import make_config
+from screenshot_sdk.features import _make_feature
+from screenshot_sdk.core.control import ScreenshotControl
+from screenshot_sdk.core.error import ScreenshotError
+from screenshot_sdk.core.result import ScreenshotResult
+from screenshot_sdk.core.spec import ScreenshotSpec
 
 
 # True when this SDK was generated with the named feature.

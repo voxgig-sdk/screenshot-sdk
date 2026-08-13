@@ -6,9 +6,9 @@ import time
 
 import pytest
 
-from utility.voxgig_struct import voxgig_struct as vs
+from screenshot_sdk.utility.voxgig_struct import voxgig_struct as vs
 from screenshot_sdk import ScreenshotSDK
-from core import helpers
+from screenshot_sdk.core import helpers
 
 _TEST_DIR = os.path.dirname(os.path.abspath(__file__))
 from test import runner
@@ -44,7 +44,7 @@ class TestRedactEntity:
         redact_ref01_data = helpers.to_map(vs.getprop(
             vs.getpath(setup["data"], "new.redact"), "redact_ref01"))
 
-        redact_ref01_data = helpers.to_map(redact_ref01_ent.create(redact_ref01_data, None))
+        redact_ref01_data = helpers.to_map(runner.entity_data(redact_ref01_ent.create(redact_ref01_data, None)))
         assert redact_ref01_data is not None
 
 

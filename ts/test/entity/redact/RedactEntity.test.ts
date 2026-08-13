@@ -62,7 +62,7 @@ describe('RedactEntity', async () => {
     const redact_ref01_ent = client.Redact()
     let redact_ref01_data = setup.data.new.redact['redact_ref01']
 
-    redact_ref01_data = await redact_ref01_ent.create(redact_ref01_data)
+    redact_ref01_data = (await redact_ref01_ent.create(redact_ref01_data)).data()
     assert(null != redact_ref01_data)
 
 

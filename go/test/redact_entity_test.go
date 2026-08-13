@@ -58,7 +58,7 @@ func TestRedactEntity(t *testing.T) {
 		if err != nil {
 			t.Fatalf("create failed: %v", err)
 		}
-		redactRef01Data = core.ToMapAny(redactRef01DataResult)
+		redactRef01Data = core.ToMapAny(entityData(redactRef01DataResult))
 		if redactRef01Data == nil {
 			t.Fatal("expected create result to be a map")
 		}

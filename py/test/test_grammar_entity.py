@@ -6,9 +6,9 @@ import time
 
 import pytest
 
-from utility.voxgig_struct import voxgig_struct as vs
+from screenshot_sdk.utility.voxgig_struct import voxgig_struct as vs
 from screenshot_sdk import ScreenshotSDK
-from core import helpers
+from screenshot_sdk.core import helpers
 
 _TEST_DIR = os.path.dirname(os.path.abspath(__file__))
 from test import runner
@@ -44,7 +44,7 @@ class TestGrammarEntity:
         grammar_ref01_data = helpers.to_map(vs.getprop(
             vs.getpath(setup["data"], "new.grammar"), "grammar_ref01"))
 
-        grammar_ref01_data = helpers.to_map(grammar_ref01_ent.create(grammar_ref01_data, None))
+        grammar_ref01_data = helpers.to_map(runner.entity_data(grammar_ref01_ent.create(grammar_ref01_data, None)))
         assert grammar_ref01_data is not None
 
 

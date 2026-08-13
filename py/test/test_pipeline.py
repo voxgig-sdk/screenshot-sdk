@@ -16,11 +16,11 @@
 import pytest
 
 from screenshot_sdk import ScreenshotSDK
-from core.error import ScreenshotError
-from core.result import ScreenshotResult
-from core.response import ScreenshotResponse
-from core.spec import ScreenshotSpec
-from feature.base_feature import ScreenshotBaseFeature
+from screenshot_sdk.core.error import ScreenshotError
+from screenshot_sdk.core.result import ScreenshotResult
+from screenshot_sdk.core.response import ScreenshotResponse
+from screenshot_sdk.core.spec import ScreenshotSpec
+from screenshot_sdk.feature.base_feature import ScreenshotBaseFeature
 
 
 def _client():

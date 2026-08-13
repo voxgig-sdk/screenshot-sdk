@@ -41,7 +41,7 @@ describe("GrammarEntity", function()
 
     local grammar_ref01_data_result, err = grammar_ref01_ent:create(grammar_ref01_data, nil)
     assert.is_nil(err)
-    grammar_ref01_data = helpers.to_map(grammar_ref01_data_result)
+    grammar_ref01_data = helpers.to_map(type(grammar_ref01_data_result) == 'table' and grammar_ref01_data_result.data_get and grammar_ref01_data_result:data_get() or grammar_ref01_data_result)
     assert.is_not_nil(grammar_ref01_data)
 
   end)

@@ -1,4 +1,4 @@
-# ProjectName SDK exists test
+# Screenshot SDK exists test
 
 import pytest
 from screenshot_sdk import ScreenshotSDK

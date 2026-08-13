@@ -62,7 +62,7 @@ describe('IpnEntity', async () => {
     // LOAD
     const ipn_ref01_ent = client.Ipn()
     const ipn_ref01_match_dt0: any = {}
-    const ipn_ref01_data_dt0 = await ipn_ref01_ent.load(ipn_ref01_match_dt0)
+    const ipn_ref01_data_dt0 = (await ipn_ref01_ent.load(ipn_ref01_match_dt0)).data()
     assert(null != ipn_ref01_data_dt0)
 
 
