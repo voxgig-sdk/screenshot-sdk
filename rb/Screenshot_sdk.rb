@@ -28,7 +28,7 @@ class ScreenshotSDK
     utility = ScreenshotUtility.new
     @_utility = utility
 
-    config = ScreenshotConfig.make_config
+    config = ScreenshotConfig.shared_config
 
     @_rootctx = utility.make_context.call({
       "client" => self,

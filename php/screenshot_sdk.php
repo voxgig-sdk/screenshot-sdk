@@ -40,7 +40,7 @@ class ScreenshotSDK
         $utility = new ScreenshotUtility();
         $this->_utility = $utility;
 
-        $config = ScreenshotConfig::make_config();
+        $config = ScreenshotConfig::shared_config();
 
         $this->_rootctx = ($utility->make_context)([
             "client" => $this,
