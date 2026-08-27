@@ -28,6 +28,7 @@ module ScreenshotConfig
           "options" => {
             "active" => false,
           },
+          "transport" => "base",
         },
       },
       "options" => {
