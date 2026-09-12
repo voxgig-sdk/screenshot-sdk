@@ -67,15 +67,17 @@ def email_validate_direct_setup(mockres)
   env = Runner.env_override({
     "SCREENSHOT_TEST_EMAIL_VALIDATE_ENTID" => {},
     "SCREENSHOT_TEST_LIVE" => "FALSE",
-    "SCREENSHOT_APIKEY" => "NONE",
+    "SCREENSHOT_APIKEY" => "",
   })
 
   live = env["SCREENSHOT_TEST_LIVE"] == "TRUE"
 
   if live
-    merged_opts = {
+    # Merged so the generated fields win: sdk-test-control.json's
+    # test.client.options adds to the live client, it does not redirect it.
+    merged_opts = Runner.live_client_options.merge({
       "apikey" => env["SCREENSHOT_APIKEY"],
-    }
+    })
     client = ScreenshotSDK.new(merged_opts)
     return {
       client: client,

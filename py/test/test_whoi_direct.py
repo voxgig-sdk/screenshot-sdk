@@ -60,15 +60,18 @@ def _whoi_direct_setup(mockres):
     env = runner.env_override({
         "SCREENSHOT_TEST_WHOI_ENTID": {},
         "SCREENSHOT_TEST_LIVE": "FALSE",
-        "SCREENSHOT_APIKEY": "NONE",
+        "SCREENSHOT_APIKEY": "",
     })
 
     live = env.get("SCREENSHOT_TEST_LIVE") == "TRUE"
 
     if live:
-        merged_opts = {
+        # sdk-test-control.json's test.client.options seeds the live
+        # client; the generated fields below overwrite anything they name.
+        merged_opts = dict(runner.live_client_options())
+        merged_opts.update({
             "apikey": env.get("SCREENSHOT_APIKEY"),
-        }
+        })
         client = ScreenshotSDK(merged_opts)
         return {
             "client": client,
