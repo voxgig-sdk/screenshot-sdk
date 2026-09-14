@@ -28,7 +28,7 @@ loading a specific record.
 ### 1. Create a client
 
 ```ts
-import { ScreenshotSDK } from '@voxgig-sdk/screenshot'
+import { ScreenshotSDK } from '@voxgig-sdk/screenshot-sdk'
 
 const client = new ScreenshotSDK({
   apikey: process.env.SCREENSHOT_APIKEY,
@@ -805,7 +805,7 @@ screenshot/
 Import the SDK from the package root:
 
 ```ts
-import { ScreenshotSDK } from '@voxgig-sdk/screenshot'
+import { ScreenshotSDK } from '@voxgig-sdk/screenshot-sdk'
 ```
 
 ### Entity state

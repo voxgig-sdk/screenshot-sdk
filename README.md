@@ -105,7 +105,7 @@ local result, err = client:Utility():load({ input = "example" })
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/screenshot` | publish pending — [install from git tag](https://github.com/voxgig-sdk/screenshot-sdk/releases) |
+| TypeScript | `@voxgig-sdk/screenshot-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/screenshot-sdk/releases) |
 | Python | `voxgig-sdk-screenshot` | publish pending — [install from git tag](https://github.com/voxgig-sdk/screenshot-sdk/releases) |
 | PHP | `voxgig-sdk/screenshot` | publish pending — [install from git tag](https://github.com/voxgig-sdk/screenshot-sdk/releases) |
 | Golang | `github.com/voxgig-sdk/screenshot-sdk/go` | `go get github.com/voxgig-sdk/screenshot-sdk/go@latest` |
@@ -119,7 +119,7 @@ local result, err = client:Utility():load({ input = "example" })
 ### TypeScript
 
 ```ts
-import { ScreenshotSDK } from '@voxgig-sdk/screenshot'
+import { ScreenshotSDK } from '@voxgig-sdk/screenshot-sdk'
 
 const client = new ScreenshotSDK({
   apikey: process.env.SCREENSHOT_APIKEY,
