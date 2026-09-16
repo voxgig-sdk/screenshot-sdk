@@ -4,7 +4,10 @@ declare(strict_types=1);
 // Screenshot SDK feature factory
 
 require_once __DIR__ . '/feature/BaseFeature.php';
+require_once __DIR__ . '/feature/RatelimitFeature.php';
+require_once __DIR__ . '/feature/RetryFeature.php';
 require_once __DIR__ . '/feature/TestFeature.php';
+require_once __DIR__ . '/feature/TimeoutFeature.php';
 
 
 class ScreenshotFeatures
@@ -14,8 +17,14 @@ class ScreenshotFeatures
         switch ($name) {
             case "base":
                 return new ScreenshotBaseFeature();
+            case "ratelimit":
+                return new ScreenshotRatelimitFeature();
+            case "retry":
+                return new ScreenshotRetryFeature();
             case "test":
                 return new ScreenshotTestFeature();
+            case "timeout":
+                return new ScreenshotTimeoutFeature();
             default:
                 return new ScreenshotBaseFeature();
         }
@@ -31,7 +40,10 @@ class ScreenshotFeatures
     {
         switch ($name) {
             case "base":
+            case "ratelimit":
+            case "retry":
             case "test":
+            case "timeout":
                 return true;
             default:
                 return false;
