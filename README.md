@@ -105,12 +105,12 @@ local result, err = client:Utility():load({ input = "example" })
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/screenshot-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/screenshot-sdk/releases) |
-| Python | `voxgig-sdk-screenshot` | publish pending — [install from git tag](https://github.com/voxgig-sdk/screenshot-sdk/releases) |
-| PHP | `voxgig-sdk/screenshot` | publish pending — [install from git tag](https://github.com/voxgig-sdk/screenshot-sdk/releases) |
+| TypeScript | `@voxgig-sdk/screenshot-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/screenshot-sdk/tags) |
+| Python | `voxgig-sdk-screenshot` | publish pending — [install from git tag](https://github.com/voxgig-sdk/screenshot-sdk/tags) |
+| PHP | `voxgig-sdk/screenshot` | publish pending — [install from git tag](https://github.com/voxgig-sdk/screenshot-sdk/tags) |
 | Golang | `github.com/voxgig-sdk/screenshot-sdk/go` | `go get github.com/voxgig-sdk/screenshot-sdk/go@latest` |
-| Ruby | `voxgig-sdk-screenshot` | publish pending — [install from git tag](https://github.com/voxgig-sdk/screenshot-sdk/releases) |
-| Lua | `voxgig-sdk-screenshot` | publish pending — [install from git tag](https://github.com/voxgig-sdk/screenshot-sdk/releases) |
+| Ruby | `voxgig-sdk-screenshot` | publish pending — [install from git tag](https://github.com/voxgig-sdk/screenshot-sdk/tags) |
+| Lua | `voxgig-sdk-screenshot` | publish pending — [install from git tag](https://github.com/voxgig-sdk/screenshot-sdk/tags) |
 | Go CLI | `github.com/voxgig-sdk/screenshot-sdk/go-cli` | `go install github.com/voxgig-sdk/screenshot-sdk/go-cli/cmd/screenshot@latest` |
 | Go MCP server | `github.com/voxgig-sdk/screenshot-sdk/go-mcp` | `go get github.com/voxgig-sdk/screenshot-sdk/go-mcp@latest` |
 
