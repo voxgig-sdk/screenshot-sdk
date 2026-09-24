@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.DomainEntity = void 0;
 const ScreenshotEntityBase_1 = require("../ScreenshotEntityBase");
-// TODO: needs Entity superclass
 class DomainEntity extends ScreenshotEntityBase_1.ScreenshotEntityBase {
     constructor(client, entopts) {
         super(client, entopts);

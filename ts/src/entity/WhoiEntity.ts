@@ -19,7 +19,6 @@ import type {
   WhoiListMatch,
 } from '../ScreenshotTypes'
 
-// TODO: needs Entity superclass
 class WhoiEntity extends ScreenshotEntityBase<Whoi> {
 
   constructor(client: ScreenshotSDK, entopts: any) {

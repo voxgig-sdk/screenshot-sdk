@@ -19,7 +19,6 @@ import type {
   DomainListMatch,
 } from '../ScreenshotTypes'
 
-// TODO: needs Entity superclass
 class DomainEntity extends ScreenshotEntityBase<Domain> {
 
   constructor(client: ScreenshotSDK, entopts: any) {

@@ -19,7 +19,6 @@ import type {
   SslListMatch,
 } from '../ScreenshotTypes'
 
-// TODO: needs Entity superclass
 class SslEntity extends ScreenshotEntityBase<Ssl> {
 
   constructor(client: ScreenshotSDK, entopts: any) {
